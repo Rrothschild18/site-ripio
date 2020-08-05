@@ -110,7 +110,7 @@ function watch() {
 	gulp.watch([pkg.paths.src.img + "**/*"], imagemin);
 }
 
-exports.default = gulp.parallel(css, js, fonts, imagemin);
+exports.default = gulp.parallel(css, js, fonts, imagemin, fontello);
 exports.css = css;
 exports.watch = gulp.parallel(watch);
 exports.scss = scss;
