@@ -8,32 +8,30 @@
 	<body>
 		<h1>Loading...</h1>
 	</body>
-	<footer>
-		<script src="assets/js/app.min.js"></script>
-		<script>
-			// Web fonts
-			WebFontConfig = {
-				google: {
-					families: [
-						"Nunito:400,600,700,800,900",
-						"Roboto:400,700,800,900",
-					],
-				},
-				custom: {
-					families: ["fontello"],
-					urls: ["./assets/fonts/fontello/css/fontello.css"],
-				},
-			};
+	<script src="assets/js/app.min.js"></script>
+	<script>
+		// Web fonts
+		WebFontConfig = {
+			google: {
+				families: [
+					"Nunito:400,600,700,800,900",
+					"Roboto:400,700,800,900",
+				],
+			},
+			custom: {
+				families: ["fontello"],
+				urls: ["./assets/fonts/fontello/css/fontello.css"],
+			},
+		};
 
-			(function () {
-				var wf = document.createElement("script");
-				wf.src =
-					"https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js";
-				wf.type = "text/javascript";
-				wf.async = "true";
-				var s = document.getElementsByTagName("script")[0];
-				s.parentNode.insertBefore(wf, s);
-			})();
-		</script>
-	</footer>
+		(function () {
+			var wf = document.createElement("script");
+			wf.src =
+				"https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js";
+			wf.type = "text/javascript";
+			wf.async = "true";
+			var s = document.getElementsByTagName("script")[0];
+			s.parentNode.insertBefore(wf, s);
+		})();
+	</script>
 </html>
