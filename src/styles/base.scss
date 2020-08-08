@@ -1,11 +1,14 @@
 //Background Body
 body {
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: contain;
 }
 
 // GERAL
 .container {
 	position: relative;
-	width: 1360px;
+	width: 940px;
 	margin: 0 auto;
 }
 
@@ -15,5 +18,12 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: "Barlow Condensed", sans-serif;
+	font-family: "Lato", "Nunito";
+}
+p {
+	font-weight: 300;
+}
+
+._justify-between {
+	justify-content: space-between;
 }

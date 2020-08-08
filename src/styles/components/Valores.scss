@@ -1,0 +1,54 @@
+.Valores {
+	padding-top: 330px;
+	text-align: left;
+
+	span.line {
+		display: inline-flex;
+		margin-bottom: 40px;
+		font-size: 18px;
+
+		&:after {
+			content: "";
+			border-bottom: 2px solid #444;
+			width: 35px;
+			margin: auto 20px;
+		}
+	}
+
+	.content {
+		padding-top: 80px;
+		text-align: left;
+
+		.Card {
+			text-align: center;
+			img {
+				position: relative;
+				top: unset;
+				left: unset;
+				transform: unset;
+				margin-bottom: 40px;
+			}
+
+			.text {
+				text-align: left;
+				h3 {
+					color: #444;
+					font-weight: 900;
+				}
+				p {
+					margin: 0;
+					color: #444;
+					font-weight: 300;
+					width: 100%;
+				}
+			}
+
+			&:hover {
+				h3,
+				p {
+					color: #6d07e6;
+				}
+			}
+		}
+	}
+}

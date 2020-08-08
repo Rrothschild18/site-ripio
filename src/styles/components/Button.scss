@@ -1,0 +1,28 @@
+.Button {
+	border-radius: 30px;
+
+	&._is-primary {
+		background-color: transparent;
+		height: 32px;
+		line-height: 32px;
+		border: solid 1px #fff;
+
+		&:hover {
+			background-color: #fff;
+			color: #000;
+		}
+	}
+
+	&._is-secondary {
+		width: 182px;
+		margin-top: 64px;
+		background-color: #fff;
+		color: #6d07e6;
+		font-weight: 400;
+		box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+
+		&:hover {
+			background: linear-gradient(0%, #e4d3fd 100%, #f8f3ff 100%);
+		}
+	}
+}

@@ -1,0 +1,30 @@
+.Banner {
+	.content {
+		text-align: left;
+		width: 500px;
+		padding-top: 200px;
+
+		h1 {
+			color: #ffffff;
+			font-weight: 600;
+			font-family: "Lato";
+		}
+		p {
+			font-family: "Lato";
+			color: #ffffff;
+			font-weight: 300;
+			margin: 22px 0;
+			width: 90%;
+		}
+	}
+
+	&._gray {
+		position: absolute;
+		width: 100%;
+		left: 0;
+		padding: 1263px 0;
+		background-size: cover;
+		background-repeat: no-repeat;
+		z-index: -1;
+	}
+}
