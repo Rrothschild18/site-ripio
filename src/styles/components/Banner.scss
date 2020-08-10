@@ -7,13 +7,14 @@
 			color: #ffffff;
 			font-weight: 600;
 			font-family: "Lato";
+			width: 70%;
 		}
 		p {
 			font-family: "Lato";
 			color: #ffffff;
 			font-weight: 300;
 			margin: 22px 0;
-			width: 90%;
+			width: 80%;
 		}
 	}
 
@@ -29,14 +30,15 @@
 
 	@media only screen and (max-width: 1920px) {
 		.content {
-			padding-top: 200px;
+			padding-top: 300px;
 		}
 	}
 
 	@include breakpoint(0, 1440px) {
 		.content {
+			padding-top: 250px;
 			h1 {
-				width: 80%;
+				width: 60%;
 			}
 		}
 		&._gray {
@@ -45,6 +47,13 @@
 		}
 	}
 	@include breakpoint(0, $md) {
+		.content {
+			margin-bottom: 70px;
+			padding-top: 150px;
+			h1 {
+				width: 70%;
+			}
+		}
 		&._gray {
 			padding: 900px 0;
 			width: 100%;
@@ -53,9 +62,13 @@
 	}
 	@include breakpoint(0, $sm) {
 		.content {
-			padding-top: 110px;
+			margin-top: 70px;
+			padding-top: 60px;
 			h1 {
-				width: 100%;
+				width: 60%;
+			}
+			p {
+				width: 60%;
 			}
 
 			.Button {
@@ -68,6 +81,22 @@
 			padding: 743px 0;
 			width: 100%;
 			left: 0;
+		}
+	}
+	@include breakpoint(0, $xs) {
+		.content {
+			h1,
+			p {
+				width: 92%;
+			}
+			.Button {
+				margin-top: 0;
+				width: 100px;
+				font-size: 1rem;
+				height: 30px;
+				line-height: 30px;
+				padding: 0 10px;
+			}
 		}
 	}
 }

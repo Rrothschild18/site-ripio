@@ -5,16 +5,16 @@
 		<title>Cripto</title>
 		<link rel="stylesheet" type="text/css" href="assets/css/app.css" />
 	</head>
-	<body style="background-image: url(assets/images/index_hero.png);">
-		<header class="Header">
+	<body style="background-image: url(assets/images/index_hero.png);" data-target="toggle">
+		<header class="Header js-scroll" data-target="scroll">
 			<div class="container">
 				<div class="menu">
 					<div class="logo">
 						<img src="assets/images/logo_ripio.svg" />
 					</div>
-					<nav>
+					<nav data-target="nav-mob">
 						<ul>
-							<li>
+							<li class="nav-list">
 								Produto
 								<i class="icon-left-open-big"></i>
 
@@ -25,7 +25,7 @@
 									</ul>
 								</nav>
 							</li>
-							<li>
+							<li class="nav-list">
 								Cotação
 								<i class="icon-left-open-big"></i>
 								<nav class="dropdown">
@@ -37,7 +37,7 @@
 									</ul>
 								</nav>
 							</li>
-							<li>
+							<li class="nav-list">
 								Compra
 								<i class="icon-left-open-big"></i>
 								<nav class="dropdown">
@@ -53,15 +53,15 @@
 					</nav>
 				</div>
 				<div class="login">
-					<span>Entrar</span>
+					<a href="#">Entrar</a>
 					<button class="Button _is-primary">Cadastrar</button>
 				</div>
-				<div class="menu-mobile">
+				<div class="menu-mobile _show-md">
 					<div class="stick"></div>
 				</div>
 			</div>
 		</header>
-		<section class="Banner">
+		<section class="Banner js-scroll" data-target="scroll">
 			<div class="container">
 				<div class="Row">
 					<div class="col">
@@ -80,7 +80,7 @@
 				<p>Abra sua conta grátis e comece a operar.</p>
 				<div class="content">
 					<div class="Row _gutters _justify-between">
-						<div class="col _col-4 Card">
+						<div class="col _col-4 Card js-scroll" data-anime="show-down">
 							<img src="assets/images/deposito.svg" alt="" />
 							<div class="text">
 								<h4>Faça um depósito</h4>
@@ -90,7 +90,7 @@
 								</p>
 							</div>
 						</div>
-						<div class="col _col-4 Card">
+						<div class="col _col-4 Card js-scroll" data-anime="show-down">
 							<img src="assets/images/moeda.svg" alt="" />
 							<div class="text">
 								<h4>Compre Cripto</h4>
@@ -100,7 +100,7 @@
 								</p>
 							</div>
 						</div>
-						<div class="col _col-4 Card">
+						<div class="col _col-4 Card js-scroll" data-anime="show-down">
 							<img src="assets/images/fundos.svg" alt="" />
 							<div class="text">
 								<h4>Gerencia seus fundos</h4>
@@ -108,7 +108,6 @@
 									Guarde e envie suas criptos ou retire seus fundos quando quiser.
 								</p>
 							</div>
-						</div>
 					</div>
 				</div>
 			</div>
@@ -117,8 +116,8 @@
 			class="Banner _gray"
 			style="background-image: url(assets/images/bg_gray.svg);"
 		></section>
-		<section class="Acesso">
-			<img src="assets/images/ilus_acceso3x.png" class="_hide-sm" alt="" />
+		<section class="Acesso js-scroll" data-target="scroll">
+			<img src="assets/images/ilus_acceso3x.png" class="" alt="" />
 			<div class="container">
 				<div class="Row">
 					<div class="col _col-6">
@@ -135,7 +134,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="Valores">
+		<section class="Valores js-scroll" data-target="scroll">
 			<div class="container">
 				<span class="line">Valores</span>
 				<h2 class="">Somos sua porta de acesso ao mundo cripto</h2>
@@ -185,8 +184,8 @@
 				</div>
 			</div>
 		</section>
-		<section class="Acesso _flex">
-			<img src="assets/images/ilus_control3x.png" class="_hide-sm" alt="" />
+		<section class="Acesso _flex js-scroll" data-anima="show-right">
+			<img src="assets/images/ilus_control3x.png" class="" alt="" />
 			<div class="container">
 				<div class="Row">
 					<div class="col _col-6"></div>
@@ -205,7 +204,7 @@
 				</div>
 			</div>
 		</section>
-		<footer class="Footer">
+		<footer class="Footer" data-target="scroll">
 			<div class="container">
 				<div class="Row">
 					<div class="col _col-4">
@@ -214,8 +213,8 @@
 						<button class="Button _is-primary">Entrar</button>
 					</div>
 					<div class="col _col-3">
-						<h5>Pontos</h5>
-						<ul>
+						<h5>Pontos <i class="icon-left-open-big _show-sm"></i></h5>
+						<ul class="menu-footer">
 							<a href="#"><li>Carteira Bitcoin</li></a>
 							<a href="#"><li>Exchange</li></a>
 							<a href="#"><li>Meios de pagamento</li></a>
@@ -223,15 +222,15 @@
 						</ul>
 					</div>
 					<div class="col _col-2">
-						<h5>Educacao</h5>
-						<ul>
+						<h5>Educacao <i class="icon-left-open-big _show-sm"></i></h5>
+						<ul class="menu-footer">
 							<a href="#"><li>Launchpad</li></a>
 							<a href="#"><li>Como comprar</li></a>
 						</ul>
 					</div>
 					<div class="col _col-3">
-						<h5>Institucional</h5>
-						<ul>
+						<h5>Institucional <i class="icon-left-open-big _show-sm"></i></h5>
+						<ul class="menu-footer">
 							<a href="#"><li>Sobre nós</li></a>
 							<a href="#"><li>Trabalhe conosco</li></a>
 							<a href="#"><li>Termos e condições</li></a>

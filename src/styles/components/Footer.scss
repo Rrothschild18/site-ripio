@@ -83,6 +83,10 @@
 			.logo {
 				color: #fff;
 				font-size: 30px;
+
+				&:before {
+					margin-right: 1.9rem;
+				}
 			}
 		}
 	}
@@ -98,6 +102,79 @@
 		}
 		&._is-secondary {
 			margin-top: 40px;
+		}
+	}
+
+	@include breakpoint(0, $sm) {
+		padding-bottom: 25px;
+		text-align: left;
+		h3 {
+			width: 100%;
+			text-align: center;
+		}
+
+		h5 {
+			text-align: left;
+			width: 100%;
+			margin: 0;
+			padding: 20px 0;
+
+			i {
+				float: right;
+				font-weight: bold;
+
+				&::before {
+					transform: rotate(270deg);
+					transition: all 0.225s linear;
+				}
+
+				&._rotate {
+					&::before {
+						transform: rotate(90deg);
+						transition: all 0.225s linear;
+					}
+				}
+			}
+		}
+
+		.menu-footer {
+			text-align: left;
+			display: block;
+			max-height: 0;
+			opacity: 0;
+			transition: max-height 0.5s, opacity 0.225s linear;
+
+			&._ativo {
+				display: block;
+				max-height: 300px;
+				opacity: 1;
+				transition: all 0.5s linear;
+			}
+		}
+
+		.copyright {
+			p {
+				margin-bottom: 30px;
+			}
+			.redes {
+				display: block;
+				text-align: center;
+				ul {
+					margin-bottom: 20px;
+				}
+			}
+		}
+
+		button {
+			display: block;
+			margin-bottom: 15px;
+
+			&._is-secondary {
+				width: 100%;
+			}
+			&._is-primary {
+				width: 100%;
+			}
 		}
 	}
 }

@@ -27,6 +27,39 @@ p {
 ._justify-between {
 	justify-content: space-between;
 }
+.js-scroll {
+	opacity: 0;
+	transform: translate3d(-30px, 0, 0);
+	transition: 0.75s;
+
+	&.scroll {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+		animation: show_down 1s;
+	}
+}
+
+@keyframes show_right {
+	from {
+		opacity: 0;
+		transform: translate3d(-30px, 0, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+@keyframes show_down {
+	from {
+		opacity: 0;
+		transform: translate3d(0, -30px, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
 
 @include breakpoint(0, 1440px) {
 	.container {
@@ -104,6 +137,9 @@ p {
 	.container {
 		width: 740px;
 	}
+	._show-md {
+		display: flex;
+	}
 	h1,
 	._h1 {
 		font-size: 2.5rem;
@@ -114,19 +150,16 @@ p {
 	}
 	h3,
 	._h3 {
-		font-size: 1.4rem;
+		font-size: 1.2rem;
 	}
 	h4,
 	._h4 {
-		font-size: 18px;
 	}
 	h5,
 	._h5 {
-		font-size: 18px;
 	}
 	h6,
 	._h6 {
-		font-size: 18px;
 	}
 }
 @include breakpoint(0, 500px) {
@@ -149,19 +182,16 @@ p {
 	}
 	h3,
 	._h3 {
-		font-size: 1.6rem;
+		font-size: 1.1rem;
 	}
 	h4,
 	._h4 {
-		font-size: 18px;
 	}
 	h5,
 	._h5 {
-		font-size: 18px;
 	}
 	h6,
 	._h6 {
-		font-size: 18px;
 	}
 }
 @include breakpoint(0, $xs) {

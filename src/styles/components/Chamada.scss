@@ -29,14 +29,12 @@
 	}
 	@include breakpoint(0, $lg) {
 		padding-top: calc(100vw - 840px);
-
-		.content {
-			padding-top: 70px;
-		}
+	}
+	@include breakpoint(0, $md) {
 	}
 	@include breakpoint(0, $sm) {
 		padding-top: calc(100vw - 520px);
-		margin-bottom: 100px;
+		margin-bottom: 270px;
 
 		.col {
 			margin-bottom: 70px !important;
@@ -44,5 +42,8 @@
 		.content {
 			padding-top: 70px;
 		}
+	}
+	@include breakpoint(0, $xs) {
+		margin-top: 30px;
 	}
 }

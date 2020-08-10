@@ -59,6 +59,9 @@
 	}
 
 	@media only screen and (max-width: 1920px) {
+		.content {
+			width: 160%;
+		}
 		img {
 			z-index: 4;
 			width: 50%;
@@ -71,11 +74,31 @@
 		&._flex {
 			padding: 200px 0 300px 0;
 		}
+		.content {
+			width: 150%;
+		}
 	}
+	@include breakpoint(0, $lg) {
+		.content {
+			width: 140%;
+		}
+		&._flex {
+			padding: 200px 0 300px 0;
+		}
+	}
+
 	@include breakpoint(0, $md) {
 		.content {
+			width: 100%;
 			h2 {
 				width: 80%;
+			}
+		}
+		.Row {
+			.col {
+				&._col-6 {
+					width: 100%;
+				}
 			}
 		}
 		img {
@@ -84,15 +107,60 @@
 		}
 
 		&._flex {
-			padding: 150px 0;
+			padding: 188px 0 150px;
 
 			img {
-				width: 46%;
-				top: 240px;
+				width: 48%;
+				top: -225px;
 			}
 
 			.content {
 				width: 100%;
+				h2 {
+					width: 90%;
+				}
+			}
+		}
+	}
+
+	@include breakpoint(0, $sm) {
+		img {
+			width: 43%;
+			margin-top: -287px;
+		}
+
+		&._flex {
+			padding: 100px 0 150px;
+
+			img {
+				width: 49%;
+				top: 50px;
+			}
+
+			.content {
+				width: 100%;
+				h2 {
+					width: 90%;
+				}
+			}
+		}
+	}
+	@include breakpoint(0, $xs) {
+		img {
+			width: 67%;
+		}
+
+		&._flex {
+			padding: 30px 0 150px;
+
+			img {
+				width: 64%;
+				top: 80px;
+			}
+
+			.content {
+				width: 100%;
+				text-align: center;
 				h2 {
 					width: 90%;
 				}

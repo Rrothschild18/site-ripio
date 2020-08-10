@@ -1464,6 +1464,31 @@ p {
   -ms-flex-pack: justify;
       justify-content: space-between; }
 
+.js-scroll {
+  opacity: 0;
+  transform: translate3d(-30px, 0, 0);
+  transition: 0.75s; }
+  .js-scroll.scroll {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    animation: show_down 1s; }
+
+@keyframes show_right {
+  from {
+    opacity: 0;
+    transform: translate3d(-30px, 0, 0); }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0); } }
+
+@keyframes show_down {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -30px, 0); }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0); } }
+
 @media (max-width: 1440px) {
   .container {
     width: 1000px; }
@@ -1510,6 +1535,9 @@ p {
 @media (max-width: 992px) {
   .container {
     width: 740px; }
+  ._show-md {
+    display: -ms-flexbox;
+    display: flex; }
   h1,
   ._h1 {
     font-size: 2.5rem; }
@@ -1518,16 +1546,7 @@ p {
     font-size: 1.6rem; }
   h3,
   ._h3 {
-    font-size: 1.4rem; }
-  h4,
-  ._h4 {
-    font-size: 18px; }
-  h5,
-  ._h5 {
-    font-size: 18px; }
-  h6,
-  ._h6 {
-    font-size: 18px; } }
+    font-size: 1.2rem; } }
 
 @media (max-width: 500px) {
   body {
@@ -1544,16 +1563,7 @@ p {
     font-size: 1.4rem; }
   h3,
   ._h3 {
-    font-size: 1.6rem; }
-  h4,
-  ._h4 {
-    font-size: 18px; }
-  h5,
-  ._h5 {
-    font-size: 18px; }
-  h6,
-  ._h6 {
-    font-size: 18px; } }
+    font-size: 1.1rem; } }
 
 .Acesso .content {
   text-align: left; }
@@ -1604,6 +1614,8 @@ p {
     display: inline-block; }
 
 @media only screen and (max-width: 1920px) {
+  .Acesso .content {
+    width: 160%; }
   .Acesso img {
     z-index: 4;
     width: 50%;
@@ -1612,21 +1624,61 @@ p {
 
 @media (max-width: 1440px) {
   .Acesso._flex {
+    padding: 200px 0 300px 0; }
+  .Acesso .content {
+    width: 150%; } }
+
+@media (max-width: 1200px) {
+  .Acesso .content {
+    width: 140%; }
+  .Acesso._flex {
     padding: 200px 0 300px 0; } }
 
 @media (max-width: 992px) {
-  .Acesso .content h2 {
-    width: 80%; }
+  .Acesso .content {
+    width: 100%; }
+    .Acesso .content h2 {
+      width: 80%; }
+  .Acesso .Row .col._col-6 {
+    width: 100%; }
   .Acesso img {
     width: 43%;
     margin-top: -30px; }
   .Acesso._flex {
-    padding: 150px 0; }
+    padding: 188px 0 150px; }
     .Acesso._flex img {
-      width: 46%;
-      top: 240px; }
+      width: 48%;
+      top: -225px; }
     .Acesso._flex .content {
       width: 100%; }
+      .Acesso._flex .content h2 {
+        width: 90%; } }
+
+@media (max-width: 768px) {
+  .Acesso img {
+    width: 43%;
+    margin-top: -287px; }
+  .Acesso._flex {
+    padding: 100px 0 150px; }
+    .Acesso._flex img {
+      width: 49%;
+      top: 50px; }
+    .Acesso._flex .content {
+      width: 100%; }
+      .Acesso._flex .content h2 {
+        width: 90%; } }
+
+@media (max-width: 480px) {
+  .Acesso img {
+    width: 67%; }
+  .Acesso._flex {
+    padding: 30px 0 150px; }
+    .Acesso._flex img {
+      width: 64%;
+      top: 80px; }
+    .Acesso._flex .content {
+      width: 100%;
+      text-align: center; }
       .Acesso._flex .content h2 {
         width: 90%; } }
 
@@ -1636,13 +1688,14 @@ p {
   .Banner .content h1 {
     color: #ffffff;
     font-weight: 600;
-    font-family: "Lato"; }
+    font-family: "Lato";
+    width: 70%; }
   .Banner .content p {
     font-family: "Lato";
     color: #ffffff;
     font-weight: 300;
     margin: 22px 0;
-    width: 90%; }
+    width: 80%; }
 
 .Banner._gray {
   position: absolute;
@@ -1655,16 +1708,23 @@ p {
 
 @media only screen and (max-width: 1920px) {
   .Banner .content {
-    padding-top: 200px; } }
+    padding-top: 300px; } }
 
 @media (max-width: 1440px) {
-  .Banner .content h1 {
-    width: 80%; }
+  .Banner .content {
+    padding-top: 250px; }
+    .Banner .content h1 {
+      width: 60%; }
   .Banner._gray {
     padding: 1100px 0;
     background-size: contain; } }
 
 @media (max-width: 992px) {
+  .Banner .content {
+    margin-bottom: 70px;
+    padding-top: 150px; }
+    .Banner .content h1 {
+      width: 70%; }
   .Banner._gray {
     padding: 900px 0;
     width: 100%;
@@ -1672,9 +1732,12 @@ p {
 
 @media (max-width: 768px) {
   .Banner .content {
-    padding-top: 110px; }
+    margin-top: 70px;
+    padding-top: 60px; }
     .Banner .content h1 {
-      width: 100%; }
+      width: 60%; }
+    .Banner .content p {
+      width: 60%; }
     .Banner .content .Button {
       margin-top: 0;
       width: 132px;
@@ -1683,6 +1746,18 @@ p {
     padding: 743px 0;
     width: 100%;
     left: 0; } }
+
+@media (max-width: 480px) {
+  .Banner .content h1,
+  .Banner .content p {
+    width: 92%; }
+  .Banner .content .Button {
+    margin-top: 0;
+    width: 100px;
+    font-size: 1rem;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px; } }
 
 .Button {
   border-radius: 30px; }
@@ -1790,11 +1865,18 @@ p {
           max-width: 87px; }
       .Card:before {
         padding-top: 236px; }
+      .Card._valores .text {
+        padding: 30px 30px 30px; }
+        .Card._valores .text h3 {
+          margin-top: 30px; }
       .Card._valores:before {
         padding-top: 322px; } }
   @media (max-width: 768px) {
     .Card .text {
       padding: 40px 30px 30px; }
+      .Card .text img {
+        margin: 0 auto;
+        max-width: 67px; }
     .Card:before {
       padding-top: 200px; }
     .Card._valores:before {
@@ -1826,17 +1908,18 @@ p {
         padding-top: 90px; } }
   @media (max-width: 1200px) {
     .Chamada {
-      padding-top: calc(100vw - 840px); }
-      .Chamada .content {
-        padding-top: 70px; } }
+      padding-top: calc(100vw - 840px); } }
   @media (max-width: 768px) {
     .Chamada {
       padding-top: calc(100vw - 520px);
-      margin-bottom: 100px; }
+      margin-bottom: 270px; }
       .Chamada .col {
         margin-bottom: 70px !important; }
       .Chamada .content {
         padding-top: 70px; } }
+  @media (max-width: 480px) {
+    .Chamada {
+      margin-top: 30px; } }
 
 .Footer {
   padding-top: 75px;
@@ -1905,6 +1988,8 @@ p {
       .Footer .copyright .redes .logo {
         color: #fff;
         font-size: 30px; }
+        .Footer .copyright .redes .logo:before {
+          margin-right: 1.9rem; }
   .Footer .Button {
     width: 195px;
     height: 32px;
@@ -1914,6 +1999,52 @@ p {
     font-weight: 400; }
     .Footer .Button._is-secondary {
       margin-top: 40px; }
+  @media (max-width: 768px) {
+    .Footer {
+      padding-bottom: 25px;
+      text-align: left; }
+      .Footer h3 {
+        width: 100%;
+        text-align: center; }
+      .Footer h5 {
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 20px 0; }
+        .Footer h5 i {
+          float: right;
+          font-weight: bold; }
+          .Footer h5 i::before {
+            transform: rotate(270deg);
+            transition: all 0.225s linear; }
+          .Footer h5 i._rotate::before {
+            transform: rotate(90deg);
+            transition: all 0.225s linear; }
+      .Footer .menu-footer {
+        text-align: left;
+        display: block;
+        max-height: 0;
+        opacity: 0;
+        transition: max-height 0.5s, opacity 0.225s linear; }
+        .Footer .menu-footer._ativo {
+          display: block;
+          max-height: 300px;
+          opacity: 1;
+          transition: all 0.5s linear; }
+      .Footer .copyright p {
+        margin-bottom: 30px; }
+      .Footer .copyright .redes {
+        display: block;
+        text-align: center; }
+        .Footer .copyright .redes ul {
+          margin-bottom: 20px; }
+      .Footer button {
+        display: block;
+        margin-bottom: 15px; }
+        .Footer button._is-secondary {
+          width: 100%; }
+        .Footer button._is-primary {
+          width: 100%; } }
 
 .Header {
   position: absolute;
@@ -1982,15 +2113,15 @@ p {
           filter: brightness(9); }
     .Header .container .login {
       display: inline-block; }
-      .Header .container .login span {
+      .Header .container .login a {
         color: #fff;
         margin-right: 60px;
         font-size: 16px;
-        font-weight: normal; }
+        font-weight: normal;
+        text-decoration: none; }
     .Header .container .menu-mobile {
       position: relative;
-      display: -ms-flexbox;
-      display: flex;
+      display: none;
       -ms-flex-pack: center;
           justify-content: center;
       -ms-flex-align: center;
@@ -2019,20 +2150,127 @@ p {
         transform: translateY(-7px); }
       .Header .container .menu-mobile::after {
         transform: translateY(7px); }
-      .Header .container .menu-mobile:hover {
+      .Header .container .menu-mobile._animation {
         transform: translateX(-50px); }
-        .Header .container .menu-mobile:hover .stick {
+        .Header .container .menu-mobile._animation .stick {
           transform: translateX(-30px);
           background: transparent;
           box-shadow: none; }
-        .Header .container .menu-mobile:hover::before {
+        .Header .container .menu-mobile._animation::before {
           transform: rotate(45deg) translate(35px, -35px); }
-        .Header .container .menu-mobile:hover::after {
+        .Header .container .menu-mobile._animation::after {
           transform: rotate(-45deg) translate(35px, 35px); }
 
 @media (max-width: 992px) {
   .Header .container .menu nav {
-    display: none; } }
+    display: none; }
+  .Header .container .login {
+    display: none; }
+  .Header .container .menu-mobile {
+    display: -ms-flexbox;
+    display: flex; }
+  ._toggled .Header {
+    position: fixed;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 10;
+    height: 100%;
+    transition: left 3s ease; }
+    ._toggled .Header._open {
+      left: 0; }
+    ._toggled .Header._close {
+      left: -100vw; }
+    ._toggled .Header .container {
+      padding-top: 37px;
+      -ms-flex-align: unset !important;
+          align-items: unset !important; }
+      ._toggled .Header .container .menu {
+        display: block;
+        width: 100%;
+        margin-right: -60px; }
+        ._toggled .Header .container .menu nav {
+          display: block;
+          padding: 20px 0;
+          text-align: center; }
+          ._toggled .Header .container .menu nav ul {
+            padding: 0; }
+          ._toggled .Header .container .menu nav li {
+            display: block;
+            font-size: 20px;
+            margin: 15px 0;
+            color: #000;
+            font-weight: bold;
+            border-bottom: 1px solid #e4e4e4; }
+            ._toggled .Header .container .menu nav li i {
+              display: none; }
+            ._toggled .Header .container .menu nav li .dropdown {
+              display: block;
+              position: relative;
+              padding: 0;
+              text-align: center;
+              top: 0; }
+              ._toggled .Header .container .menu nav li .dropdown ul {
+                margin: 0 auto;
+                background-color: transparent;
+                display: block;
+                font-weight: normal; }
+                ._toggled .Header .container .menu nav li .dropdown ul a {
+                  text-decoration: none;
+                  padding: 0; }
+                  ._toggled .Header .container .menu nav li .dropdown ul a li {
+                    margin: 10px 0;
+                    color: #000;
+                    font-weight: normal;
+                    font-size: 16px;
+                    border: 0; }
+      ._toggled .Header .container .logo {
+        filter: brightness(0); }
+      ._toggled .Header .container .login {
+        display: block;
+        position: absolute;
+        bottom: -110px;
+        text-align: center;
+        width: 100%; }
+        ._toggled .Header .container .login span {
+          display: block;
+          width: 100%;
+          color: red; }
+        ._toggled .Header .container .login .Button {
+          display: block;
+          width: 50%;
+          margin: 20px auto;
+          border-color: #6d07e6;
+          color: #6d07e6;
+          height: 30px;
+          line-height: 30px;
+          font-size: 16px; }
+          ._toggled .Header .container .login .Button._is-secondary {
+            background-color: #6d07e6 !important;
+            color: #fff; }
+      ._toggled .Header .container .menu-mobile {
+        display: -ms-flexbox;
+        display: flex; }
+        ._toggled .Header .container .menu-mobile:after, ._toggled .Header .container .menu-mobile:before {
+          background: #000; } }
+
+.Mobile {
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  overflow: scroll;
+  height: 100vh;
+  width: 100vw;
+  min-height: 100vh;
+  top: 0;
+  background: white;
+  padding-bottom: 30px;
+  transition: left 0.225s ease;
+  box-shadow: 0px 3.78839px 15.1536px rgba(0, 0, 0, 0.15);
+  z-index: 999999;
+  left: -100vw; }
 
 .Valores {
   padding-top: 530px;
@@ -2058,7 +2296,8 @@ p {
       padding-top: 330px; } }
   @media (max-width: 992px) {
     .Valores {
-      padding-top: 230px; }
+      padding-top: 230px;
+      margin-bottom: 130px; }
       .Valores .col {
         margin-bottom: 40px !important; } }
   @media (max-width: 480px) {
