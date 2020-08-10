@@ -1,7 +1,6 @@
 .Acesso {
 	.content {
 		text-align: left;
-		width: 500px;
 
 		span.line {
 			display: inline-flex;
@@ -33,13 +32,15 @@
 	img {
 		z-index: 4;
 		width: 50%;
-		margin-top: -170px;
+		margin-top: -376px;
 		float: right;
+		color: black;
 	}
 
 	&._flex {
 		display: flex;
-		padding-top: 260px;
+		padding: 260px 0 400px 0;
+
 		.content {
 			display: block;
 			width: 80%;
@@ -47,6 +48,54 @@
 			margin: 0 auto;
 			h2 {
 				font-weight: 900;
+			}
+		}
+		img {
+			position: absolute;
+			left: 0;
+			top: 400px;
+			display: inline-block;
+		}
+	}
+
+	@media only screen and (max-width: 1920px) {
+		img {
+			z-index: 4;
+			width: 50%;
+			margin-top: -170px;
+			float: right;
+		}
+	}
+
+	@include breakpoint(0, 1440px) {
+		&._flex {
+			padding: 200px 0 300px 0;
+		}
+	}
+	@include breakpoint(0, $md) {
+		.content {
+			h2 {
+				width: 80%;
+			}
+		}
+		img {
+			width: 43%;
+			margin-top: -30px;
+		}
+
+		&._flex {
+			padding: 150px 0;
+
+			img {
+				width: 46%;
+				top: 240px;
+			}
+
+			.content {
+				width: 100%;
+				h2 {
+					width: 90%;
+				}
 			}
 		}
 	}

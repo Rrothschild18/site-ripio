@@ -1,5 +1,5 @@
 .Chamada {
-	padding-top: calc(100vw - 1150px);
+	padding-top: calc(100vw - 1550px);
 	margin-bottom: 340px;
 	text-align: center;
 	display: flex;
@@ -15,5 +15,34 @@
 
 	.content {
 		padding-top: 110px;
+	}
+
+	@media only screen and (max-width: 1920px) {
+		padding-top: calc(100vw - 1130px);
+	}
+
+	@include breakpoint(0, 1440px) {
+		padding-top: calc(100vw - 1000px);
+		.content {
+			padding-top: 90px;
+		}
+	}
+	@include breakpoint(0, $lg) {
+		padding-top: calc(100vw - 840px);
+
+		.content {
+			padding-top: 70px;
+		}
+	}
+	@include breakpoint(0, $sm) {
+		padding-top: calc(100vw - 520px);
+		margin-bottom: 100px;
+
+		.col {
+			margin-bottom: 70px !important;
+		}
+		.content {
+			padding-top: 70px;
+		}
 	}
 }

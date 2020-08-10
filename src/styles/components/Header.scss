@@ -18,7 +18,7 @@
 			align-items: center;
 			nav {
 				display: inline-block;
-				padding: 30px 0;
+				padding: 60px 0;
 
 				ul {
 					padding: 5px;
@@ -30,7 +30,8 @@
 						color: #ffffff;
 						font-weight: 400;
 
-						&:hover {
+						&:hover,
+						&:focus-within {
 							i {
 								&:before {
 									transform: rotate(90deg);
@@ -89,9 +90,75 @@
 
 			span {
 				color: #fff;
-				margin-right: 30px;
+				margin-right: 60px;
 				font-size: 16px;
 				font-weight: normal;
+			}
+		}
+		.menu-mobile {
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+			width: 40px;
+			height: 40px;
+			transition: all 0.5s ease-in-out;
+
+			.stick {
+				width: 30px;
+				height: 3px;
+				background: #fff;
+				border-radius: 5px;
+				box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+				transition: all 0.5s ease-in-out;
+			}
+
+			&::before,
+			&::after {
+				content: "";
+				position: absolute;
+				width: 30px;
+				height: 3px;
+				background: #fff;
+				border-radius: 5px;
+				box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+				transition: all 0.5s ease-in-out;
+			}
+
+			&::before {
+				transform: translateY(-7px);
+			}
+
+			&::after {
+				transform: translateY(7px);
+			}
+
+			&:hover {
+				.stick {
+					transform: translateX(-30px);
+					background: transparent;
+					box-shadow: none;
+				}
+				&::before {
+					transform: rotate(45deg) translate(35px, -35px);
+				}
+				&::after {
+					transform: rotate(-45deg) translate(35px, 35px);
+				}
+				transform: translateX(-50px);
+			}
+		}
+	}
+}
+
+@include breakpoint(0, $md) {
+	.Header {
+		.container {
+			.menu {
+				nav {
+					display: none;
+				}
 			}
 		}
 	}

@@ -1,5 +1,5 @@
 .Valores {
-	padding-top: 330px;
+	padding-top: 530px;
 	text-align: left;
 
 	span.line {
@@ -19,36 +19,24 @@
 		padding-top: 80px;
 		text-align: left;
 
-		.Card {
-			text-align: center;
-			img {
-				position: relative;
-				top: unset;
-				left: unset;
-				transform: unset;
-				margin-bottom: 40px;
-			}
-
-			.text {
-				text-align: left;
-				h3 {
-					color: #444;
-					font-weight: 900;
-				}
-				p {
-					margin: 0;
-					color: #444;
-					font-weight: 300;
-					width: 100%;
-				}
-			}
-
-			&:hover {
-				h3,
-				p {
-					color: #6d07e6;
-				}
+		&:hover {
+			h3,
+			p {
+				color: #6d07e6;
 			}
 		}
+	}
+
+	@media only screen and (max-width: 1920px) {
+		padding-top: 330px;
+	}
+	@include breakpoint(0, $md) {
+		padding-top: 230px;
+		.col {
+			margin-bottom: 40px !important;
+		}
+	}
+	@include breakpoint(0, $xs) {
+		padding-top: 150px;
 	}
 }

@@ -2,13 +2,13 @@
 body {
 	background-repeat: no-repeat;
 	background-position: center top;
-	background-size: contain;
+	background-size: 100%;
 }
 
 // GERAL
 .container {
 	position: relative;
-	width: 940px;
+	width: 1150px;
 	margin: 0 auto;
 }
 
@@ -26,4 +26,161 @@ p {
 
 ._justify-between {
 	justify-content: space-between;
+}
+
+@include breakpoint(0, 1440px) {
+	.container {
+		width: 1000px;
+	}
+	body {
+		p {
+			font-size: 1.25rem;
+		}
+	}
+
+	h1,
+	._h1 {
+		font-size: 3.1rem;
+	}
+	h2,
+	._h2 {
+		font-size: 1.8rem;
+	}
+	h3,
+	._h3 {
+		font-size: 1.6rem;
+	}
+	h4,
+	._h4 {
+	}
+	h5,
+	._h5 {
+	}
+	h6,
+	._h6 {
+	}
+}
+@include breakpoint(0, 1920px) {
+	body {
+		background-size: contain, cover;
+	}
+}
+@include breakpoint(0, $lg) {
+	.container {
+		width: 900px;
+	}
+	body {
+		p {
+			font-size: 1.1rem;
+		}
+	}
+	h1,
+	._h1 {
+		font-size: 2.5rem;
+	}
+	h2,
+	._h2 {
+		font-size: 1.7rem;
+	}
+	h3,
+	._h3 {
+		font-size: 1.6rem;
+	}
+	h4,
+	._h4 {
+		font-size: 1.25rem;
+	}
+	h5,
+	._h5 {
+		font-size: 18px;
+	}
+	h6,
+	._h6 {
+		font-size: 18px;
+	}
+}
+
+@include breakpoint(0, $md) {
+	.container {
+		width: 740px;
+	}
+	h1,
+	._h1 {
+		font-size: 2.5rem;
+	}
+	h2,
+	._h2 {
+		font-size: 1.6rem;
+	}
+	h3,
+	._h3 {
+		font-size: 1.4rem;
+	}
+	h4,
+	._h4 {
+		font-size: 18px;
+	}
+	h5,
+	._h5 {
+		font-size: 18px;
+	}
+	h6,
+	._h6 {
+		font-size: 18px;
+	}
+}
+@include breakpoint(0, 500px) {
+	body {
+		background-size: calc(100vh - 220px);
+	}
+}
+@include breakpoint(0, $sm) {
+	.container {
+		width: 90%;
+	}
+
+	h1,
+	._h1 {
+		font-size: 1.9rem;
+	}
+	h2,
+	._h2 {
+		font-size: 1.4rem;
+	}
+	h3,
+	._h3 {
+		font-size: 1.6rem;
+	}
+	h4,
+	._h4 {
+		font-size: 18px;
+	}
+	h5,
+	._h5 {
+		font-size: 18px;
+	}
+	h6,
+	._h6 {
+		font-size: 18px;
+	}
+}
+@include breakpoint(0, $xs) {
+	h1,
+	._h1 {
+	}
+	h2,
+	._h2 {
+	}
+	h3,
+	._h3 {
+	}
+	h4,
+	._h4 {
+	}
+	h5,
+	._h5 {
+	}
+	h6,
+	._h6 {
+	}
 }

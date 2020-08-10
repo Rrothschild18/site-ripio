@@ -1,8 +1,7 @@
 .Banner {
 	.content {
 		text-align: left;
-		width: 500px;
-		padding-top: 200px;
+		padding-top: 350px;
 
 		h1 {
 			color: #ffffff;
@@ -22,9 +21,53 @@
 		position: absolute;
 		width: 100%;
 		left: 0;
-		padding: 1263px 0;
+		padding: 1363px 0;
 		background-size: cover;
 		background-repeat: no-repeat;
 		z-index: -1;
+	}
+
+	@media only screen and (max-width: 1920px) {
+		.content {
+			padding-top: 200px;
+		}
+	}
+
+	@include breakpoint(0, 1440px) {
+		.content {
+			h1 {
+				width: 80%;
+			}
+		}
+		&._gray {
+			padding: 1100px 0;
+			background-size: contain;
+		}
+	}
+	@include breakpoint(0, $md) {
+		&._gray {
+			padding: 900px 0;
+			width: 100%;
+			left: 0;
+		}
+	}
+	@include breakpoint(0, $sm) {
+		.content {
+			padding-top: 110px;
+			h1 {
+				width: 100%;
+			}
+
+			.Button {
+				margin-top: 0;
+				width: 132px;
+				font-size: 1rem;
+			}
+		}
+		&._gray {
+			padding: 743px 0;
+			width: 100%;
+			left: 0;
+		}
 	}
 }
