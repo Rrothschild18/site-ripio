@@ -15,9 +15,7 @@ const banner = [
 	" * @author         <%= pkg.author %>",
 	" * @version         <%= pkg.version %>",
 	" * @build          " + $.moment().format("YYYY-MM-DD HH:mm") + "",
-	" * @copyright      Copyright (c) " +
-		$.moment().format("YYYY") +
-		", <%= pkg.copyright %>",
+	" * @copyright      Copyright (c) " + $.moment().format("YYYY") + ", <%= pkg.copyright %>",
 	" */",
 ].join("\n");
 
@@ -91,9 +89,7 @@ function imagemin() {
 }
 
 function fonts() {
-	return gulp
-		.src(pkg.paths.src.fonts + "**/*")
-		.pipe(gulp.dest(pkg.paths.build.fonts));
+	return gulp.src(pkg.paths.src.fonts + "**/*").pipe(gulp.dest(pkg.paths.build.fonts));
 }
 
 function fontello() {

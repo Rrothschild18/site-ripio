@@ -27,7 +27,13 @@ footerMenu.forEach(function (item, count) {
 });
 
 function show(e, count) {
-	var x = e.target.parentElement;
+	var x = e.target;
+
+	if (x.childElementCount == 0) {
+		var z = x.parentElement;
+		x = z.parentElement;
+	} else x = e.target.parentElement;
+
 	var y = document.querySelectorAll(".Footer h5 i");
 
 	x.querySelector("ul").classList.toggle("_ativo");
